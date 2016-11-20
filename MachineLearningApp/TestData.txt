@@ -1,0 +1,4 @@
+Volume Weight Temperature Altitude Bouyancy Length Time
+500 10 9 103 54 2393 19919
+100 8 20 400 75 9000 4500
+450 7 3 44 32 900 6000

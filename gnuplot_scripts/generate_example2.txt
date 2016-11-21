@@ -1,0 +1,9 @@
+set terminal png
+set output "example2.png"
+set datafile separator ","
+set key on
+set view 45,45
+set title "3D scatterplot of example data split into 3 sets plotted different colors"
+splot 'wdbc_g1.csv' using 1:2:3 with points lc rgb 'cyan' pointsize 3 pointtype 7, \
+'wdbc_g2.csv' using 1:2:3 with points lc rgb 'red' pointsize 3 pointtype 7, \
+'wdbc_g3.csv' using 1:2:3 with points lc rgb 'green' pointsize 3 pointtype 7

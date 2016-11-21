@@ -1,0 +1,7 @@
+set terminal png
+set output "example.png"
+set datafile separator ","
+set key off
+set view 45,45
+set title "3D scatterplot of example data"
+splot 'wdbc_first3featss.csv' using 1:2:3 with points palette pointsize 3 pointtype 7

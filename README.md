@@ -1,6 +1,6 @@
-# Team_Assignment
+# DataVisualizationC
 
-Welcome to Team Assignment Repository!
+Welcome to DataVisualizationC Repository!
 
 Build Instructions:
 
@@ -16,9 +16,9 @@ wdbc_g3.csv
 
 In Terminal:
 
-cd Team_Assignment/gnuplot_scripts/
-gnuplot generate_example.txt
-gnuplot generate_example2.txt
+> cd DataVisualizationC/gnuplot_scripts/
+> gnuplot generate_example.txt
+> gnuplot generate_example2.txt
 
 ############################
 
@@ -28,10 +28,10 @@ test.txt
 
 In Terminal:
 
-cd Team_Assignment/libsvm-3.21/libsvm-3.21/
-make
-./svm-train train.txt
-./svm-predict test.txt train.txt.model output.txt
+> cd DataVisualizationC/libsvm-3.21/libsvm-3.21/
+> make
+> ./svm-train train.txt
+> ./svm-predict test.txt train.txt.model output.txt
 
 
 
@@ -41,7 +41,7 @@ To compile and use Qt application perform the following steps
 
 -Open the terminal...
 -If not already loaded, load the appropriate modules (gcc & qt).
--Browse into '/git/myproject.git/Team_Assignment/MachineLearningApp'
+-Browse into 'DataVisualizationC/MachineLearningApp'
 -The project and source files are in this location.
 -To create the make file, run the following command in this directory: 
 	> qmake -project

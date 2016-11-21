@@ -1,0 +1,26 @@
+QMAKE_DEFAULT_INCDIRS = \
+    /gpfs/runtime/opt/python/2.7.3/include \
+    /gpfs/runtime/opt/intel/2013.1.106/mkl/include \
+    /gpfs/runtime/opt/fontconfig/2.8.0/include \
+    . \
+    /gpfs/runtime/opt/gcc/5.2.0/include/c++/5.2.0 \
+    /gpfs/runtime/opt/gcc/5.2.0/include/c++/5.2.0/x86_64-redhat-linux-gnu \
+    /gpfs/runtime/opt/gcc/5.2.0/include/c++/5.2.0/backward \
+    /gpfs/runtime/opt/gcc/5.2.0/lib/gcc/x86_64-redhat-linux-gnu/5.2.0/include \
+    /usr/local/include \
+    /gpfs/runtime/opt/gcc/5.2.0/include \
+    /gpfs/runtime/opt/gcc/5.2.0/lib/gcc/x86_64-redhat-linux-gnu/5.2.0/include-fixed \
+    /usr/include
+QMAKE_DEFAULT_LIBDIRS = \
+    /gpfs/runtime/opt/centos-libs/6.3/lib64 \
+    /gpfs/runtime/opt/gcc/5.2.0/lib/gcc/x86_64-redhat-linux-gnu/5.2.0 \
+    /gpfs/runtime/opt/gcc/5.2.0/lib64 \
+    /lib64 \
+    /usr/lib64 \
+    /gpfs/runtime/opt/centos-libs/6.3/lib \
+    /gpfs/runtime/opt/python/2.7.3/lib \
+    /gpfs/runtime/opt/intel/2013.1.106/lib/intel64 \
+    /gpfs/runtime/opt/intel/2013.1.106/mkl/lib/intel64 \
+    /gpfs/runtime/opt/gcc/5.2.0/lib \
+    /lib \
+    /usr/lib

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>777</width>
-    <height>377</height>
+    <height>439</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QTextEdit" name="filepath_Edit">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>280</y>
-      <width>401</width>
+      <x>180</x>
+      <y>330</y>
+      <width>461</width>
       <height>31</height>
      </rect>
     </property>
@@ -27,9 +27,9 @@
    <widget class="QPushButton" name="browse_Button">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>280</y>
-      <width>91</width>
+      <x>650</x>
+      <y>330</y>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -37,133 +37,25 @@
      <string>Browse...</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="test_Radio">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>180</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Test Mode</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="train_Radio">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>210</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Train Mode</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="run_Button">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>280</y>
-      <width>131</width>
+      <y>330</y>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Run...</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="X_comboBox">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>111</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="Y_comboBox">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>111</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="Z_comboBox">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>100</y>
-      <width>111</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Xvar_label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>20</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>X</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Yvar_label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>20</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Y</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Zvar_label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>20</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Z</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="PlotterTitle">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Plot 3 Features</string>
+     <string>Process Dataset</string>
     </property>
    </widget>
    <widget class="QPushButton" name="reset_Button">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>280</y>
-      <width>91</width>
+      <x>10</x>
+      <y>230</y>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -175,8 +67,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>240</y>
-      <width>131</width>
+      <y>150</y>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -184,14 +76,145 @@
      <string>Plot...</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="datawindow_textBrowser">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>21</y>
-      <width>601</width>
-      <height>251</height>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>131</height>
      </rect>
+    </property>
+    <property name="title">
+     <string>Select 3 Features</string>
+    </property>
+    <widget class="QLabel" name="Zvar_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Z</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Xvar_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="X_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Yvar_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Y</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="Y_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="Z_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>581</width>
+      <height>301</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Cross-Validation</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Number of Folds:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="reset_Button_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA...</string>
     </property>
    </widget>
   </widget>

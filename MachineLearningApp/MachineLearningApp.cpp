@@ -1,5 +1,4 @@
 #include "MachineLearningApp.h"
-#include "data2plot.h"
 #include "ui_MachineLearningApp.h"
 #include "QCoreApplication"
 #include "QFileDialog"
@@ -16,11 +15,11 @@ MachineLearningApp::MachineLearningApp(QWidget *parent) :
 {
 
     ui->setupUi(this);
-    setWindowTitle("Team Assignment: Machine Learning Application");
+    setWindowTitle("Machine Learning Application");
+    this->ui->textBrowser->setText("Welcome. \n\nPlease begin by browsing to a dataset and then click 'Process Dataset'");
     this->connect(this->ui->browse_Button, SIGNAL(clicked()), this, SLOT(Browse_Click()));
     this->connect(this->ui->reset_Button, SIGNAL(clicked()), this, SLOT(ResetAll()));
     this->connect(this->ui->run_Button, SIGNAL(clicked()), this, SLOT(Run_Trainer()));
-
 
 }
 
@@ -50,22 +49,34 @@ void MachineLearningApp::ProcFile(){
     QTextStream datastream(&datafile);
 
     Features_Menu(datastream.readLine());
-    PlotData();
-    //this->ui->datawindow_textBrowser->setText(firstline);
+    this->ui->textBrowser->setText("\n\nSet the desired cross-validation settings. \n\nSelect the desired features to the plot \n\nClick Plot.");
+
+    // Extract data from file and put into datafromfile
+    QVector< QVector<double> > filedata;
+
+    //int exitloop = 0;
+    //while(exitloop < 5){
+   // StoreData(filedata,datastream.readLine());
+    //peak at next line...
+    //exitloop++;
+    //}
+
+    //StoreData(filedata,filedata);
+    QString demodata = datastream.readAll();
+    PlotData(demodata);
 
     datafile.close();
 }
 
 // Plotting function
-void MachineLearningApp::PlotData(){
+void MachineLearningApp::PlotData(QString demodata){
 
     int X_index = this->ui->X_comboBox->currentIndex();
     int Y_index = this->ui->X_comboBox->currentIndex();
     int Z_index = this->ui->X_comboBox->currentIndex();
 
-
-    //this->ui->datawindow_textBrowser->setText(X_index);
-
+    // only for demo..
+    //this->ui->traindata_tableView->setText(demodata);
 }
 
 // Reset ALL
@@ -73,6 +84,9 @@ void MachineLearningApp::ResetAll(){
 
     // Reset file path
     this->ui->filepath_Edit->QTextEdit::clear();
+
+    // Reset dialog box...
+    this->ui->textBrowser->setText("Welcome. \n\nPlease begin by browsing to a dataset and then click 'Process Dataset");
 
     // Reset combo boxes...
     this->ui->X_comboBox->clear();
@@ -106,6 +120,19 @@ void MachineLearningApp::Features_Menu(QString FeatureString){
     this->ui->Y_comboBox->addItems(Features_List);
     this->ui->Z_comboBox->addItems(Features_List);
 
+}
 
+void MachineLearningApp::StoreData(QVector< QVector<double> > &filedata, QString datarow){
+
+    QVector<double> row;
+    QList<double> rowelements;
+
+    // Fill row with elements from row string
+    // for (int i = 0; i < rowelements.size(); i++){
+    //     row[1]->push_back(rowelements(i));
+  //  }
+
+    // Add new row to filedata[][]
+   // filedata.push_back(row);
 
 }
